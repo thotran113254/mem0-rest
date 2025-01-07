@@ -23,7 +23,6 @@ services:
       - QDRANT_HOST=qdrant
     networks:
       - internal
-      - traefik-public
     labels:
       - "traefik.enable=true"
       # HTTP
@@ -44,8 +43,6 @@ services:
 networks:
   internal:
     driver: bridge
-  traefik-public:
-    external: true
 
 volumes:
   qdrant_data:
