@@ -6,9 +6,6 @@ from mem0 import Memory
 
 load_dotenv()
 
-os.environ["OPENAI_API_KEY"] = "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" # used for embedding model
-os.environ["GEMINI_API_KEY"] = "AIzaSyBHYV8hyqZeHQFvhs9YU-T0oNllrVk0gBo"
-
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 
@@ -18,7 +15,7 @@ config = {
     "llm": {
         "provider": "gemini",
         "config": {
-            "model": "gemini-1.5-flash-8b",
+            "model": "gemini-1.5-flash-latest",
             "temperature": 0.2,
             "max_tokens": 1500,
         }
