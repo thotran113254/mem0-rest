@@ -8,18 +8,44 @@ services:
     ports:
       - "6333:6333"
       - "6334:6334"
+    networks:
+      - internal
+
   mem0:
     container_name: "mem0"
     build:
       context: .
       dockerfile: Dockerfile
     env_file: .env
-    ports:
-      - "4321:5000"
     depends_on:
       - qdrant
     environment:
       - QDRANT_HOST=qdrant
+    networks:
+      - internal
+      - traefik-public
+    labels:
+      - "traefik.enable=true"
+      # HTTP
+      - "traefik.http.routers.mem0.rule=Host(`memory.mooly.vn`)"
+      - "traefik.http.routers.mem0.entrypoints=web"
+      - "traefik.http.routers.mem0.middlewares=mem0-https-redirect"
+      # HTTPS redirect
+      - "traefik.http.middlewares.mem0-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.mem0-https-redirect.redirectscheme.permanent=true"
+      # HTTPS
+      - "traefik.http.routers.mem0-secure.rule=Host(`memory.mooly.vn`)"
+      - "traefik.http.routers.mem0-secure.entrypoints=websecure"
+      - "traefik.http.routers.mem0-secure.tls=true"
+      - "traefik.http.routers.mem0-secure.tls.certresolver=le"
+      # Service
+      - "traefik.http.services.mem0.loadbalancer.server.port=5000"
+
+networks:
+  internal:
+    driver: bridge
+  traefik-public:
+    external: true
 
 volumes:
   qdrant_data:
