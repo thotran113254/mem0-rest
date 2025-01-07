@@ -13,9 +13,9 @@ api = Blueprint("api", __name__, url_prefix="/v1")
 
 config = {
     "llm": {
-        "provider": "gemini",
+        "provider": "openai",
         "config": {
-            "model": "gemini-1.5-flash-latest",
+            "model": "google/gemini-flash-1.5-8b",
             "temperature": 0.2,
             "max_tokens": 1500,
         }
