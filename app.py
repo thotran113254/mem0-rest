@@ -12,6 +12,14 @@ app.url_map.strict_slashes = False
 api = Blueprint("api", __name__, url_prefix="/v1")
 
 config = {
+    "llm": {
+        "provider": "gemini",
+        "config": {
+            "model": "gemini-1.5-flash-8b",
+            "temperature": 0.2,
+            "max_tokens": 1500,
+        }
+    },
     "vector_store": {
         "provider": "qdrant",
         "config": {
