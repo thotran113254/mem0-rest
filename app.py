@@ -27,12 +27,12 @@ config = {
             "port": os.environ.get("QDRANT_PORT", 6333),
         },
     },
-    "embedder": {
-        "provider": "gemini",
-        "config": {
-            "model": "models/text-embedding-004",
-        }
-    }
+    # "embedder": {
+    #     "provider": "gemini",
+    #     "config": {
+    #         "model": "models/text-embedding-004",
+    #     }
+    # }
 }
 
 memory = Memory.from_config(config)
