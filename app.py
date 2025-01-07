@@ -15,7 +15,7 @@ config = {
     "llm": {
         "provider": "openai",
         "config": {
-            "model": "gpt-4o-mini",
+            "model": "google/gemini-flash-1.5-8b",
             "temperature": 0.2,
             "max_tokens": 1500,
         }
