@@ -6,7 +6,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN adduser --disabled-password --no-create-home appuser
+# Tạo user với home directory
+RUN useradd -m appuser && \
+    chown -R appuser:appuser /app
 USER appuser
 
 EXPOSE 5000
