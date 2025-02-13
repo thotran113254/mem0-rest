@@ -1,0 +1,49 @@
+2025-02-13 22:18:29,520 INFO: Memory add operation completed [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:138]
+2025-02-13 22:18:29,522 INFO: Result details: [] [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:139]
+2025-02-13 22:19:29,128 INFO: Collection mem0 already exists [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:92]
+2025-02-13 22:19:29,138 INFO: Available Qdrant collections: ['mem0'] [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:96]
+2025-02-13 22:19:34,579 INFO: Deleting existing collection mem0... [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:79]
+2025-02-13 22:19:34,594 INFO: Creating new collection mem0... [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:82]
+2025-02-13 22:19:34,704 INFO: Collection created successfully. Info: status=<CollectionStatus.GREEN: 'green'> optimizer_status=<OptimizersStatusOneOf.OK: 'ok'> vectors_count=None indexed_vectors_count=0 points_count=0 segments_count=8 config=CollectionConfig(params=CollectionParams(vectors=VectorParams(size=1536, distance=<Distance.COSINE: 'Cosine'>, hnsw_config=None, quantization_config=None, on_disk=None, datatype=None, multivector_config=None), shard_number=1, sharding_method=None, replication_factor=1, write_consistency_factor=1, read_fan_out_factor=None, on_disk_payload=True, sparse_vectors=None), hnsw_config=HnswConfig(m=16, ef_construct=100, full_scan_threshold=10000, max_indexing_threads=0, on_disk=False, payload_m=None), optimizer_config=OptimizersConfig(deleted_threshold=0.2, vacuum_min_vector_number=1000, default_segment_number=0, max_segment_size=None, memmap_threshold=None, indexing_threshold=20000, flush_interval_sec=5, max_optimization_threads=None), wal_config=WalConfig(wal_capacity_mb=32, wal_segments_ahead=0), quantization_config=None) payload_schema={} [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:97]
+2025-02-13 22:19:42,901 INFO: Received add memories request: {'messages': [{'role': 'user', 'content': 'I am working on improving my tennis skills. Suggest some online courses.'}], 'user_id': 'user1', 'agent_id': 'app1', 'metadata': {'category': 'hobbies'}} [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:111]
+2025-02-13 22:19:42,901 INFO: Checking OpenAI API key: True [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:114]
+2025-02-13 22:19:42,902 INFO: Testing embedding process... [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:117]
+2025-02-13 22:19:42,902 ERROR: Embedding test failed: 'Memory' object has no attribute 'embedder' [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:123]
+Traceback (most recent call last):
+  File "D:\MOOLY-CHABOT\CODE\mem0-rest\app.py", line 120, in add_memories
+    embedding_result = memory.embedder.embed(test_message)
+                       ^^^^^^^^^^^^^^^
+AttributeError: 'Memory' object has no attribute 'embedder'
+2025-02-13 22:19:42,906 ERROR: Error in add_memories: 'Memory' object has no attribute 'embedder' [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:151]
+Traceback (most recent call last):
+  File "D:\MOOLY-CHABOT\CODE\mem0-rest\app.py", line 120, in add_memories
+    embedding_result = memory.embedder.embed(test_message)
+                       ^^^^^^^^^^^^^^^
+AttributeError: 'Memory' object has no attribute 'embedder'
+2025-02-13 22:20:45,167 INFO: Deleting existing collection mem0... [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:79]
+2025-02-13 22:20:45,181 INFO: Creating new collection mem0... [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:82]
+2025-02-13 22:20:45,320 INFO: Collection created successfully. Info: status=<CollectionStatus.GREEN: 'green'> optimizer_status=<OptimizersStatusOneOf.OK: 'ok'> vectors_count=None indexed_vectors_count=0 points_count=0 segments_count=8 config=CollectionConfig(params=CollectionParams(vectors=VectorParams(size=1536, distance=<Distance.COSINE: 'Cosine'>, hnsw_config=None, quantization_config=None, on_disk=None, datatype=None, multivector_config=None), shard_number=1, sharding_method=None, replication_factor=1, write_consistency_factor=1, read_fan_out_factor=None, on_disk_payload=True, sparse_vectors=None), hnsw_config=HnswConfig(m=16, ef_construct=100, full_scan_threshold=10000, max_indexing_threads=0, on_disk=False, payload_m=None), optimizer_config=OptimizersConfig(deleted_threshold=0.2, vacuum_min_vector_number=1000, default_segment_number=0, max_segment_size=None, memmap_threshold=None, indexing_threshold=20000, flush_interval_sec=5, max_optimization_threads=None), wal_config=WalConfig(wal_capacity_mb=32, wal_segments_ahead=0), quantization_config=None) payload_schema={} [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:97]
+2025-02-13 22:20:54,308 INFO: Deleting existing collection mem0... [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:80]
+2025-02-13 22:20:54,321 INFO: Creating new collection mem0... [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:83]
+2025-02-13 22:20:54,440 INFO: Collection created successfully. Info: status=<CollectionStatus.GREEN: 'green'> optimizer_status=<OptimizersStatusOneOf.OK: 'ok'> vectors_count=None indexed_vectors_count=0 points_count=0 segments_count=8 config=CollectionConfig(params=CollectionParams(vectors=VectorParams(size=1536, distance=<Distance.COSINE: 'Cosine'>, hnsw_config=None, quantization_config=None, on_disk=None, datatype=None, multivector_config=None), shard_number=1, sharding_method=None, replication_factor=1, write_consistency_factor=1, read_fan_out_factor=None, on_disk_payload=True, sparse_vectors=None), hnsw_config=HnswConfig(m=16, ef_construct=100, full_scan_threshold=10000, max_indexing_threads=0, on_disk=False, payload_m=None), optimizer_config=OptimizersConfig(deleted_threshold=0.2, vacuum_min_vector_number=1000, default_segment_number=0, max_segment_size=None, memmap_threshold=None, indexing_threshold=20000, flush_interval_sec=5, max_optimization_threads=None), wal_config=WalConfig(wal_capacity_mb=32, wal_segments_ahead=0), quantization_config=None) payload_schema={} [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:98]
+2025-02-13 22:20:54,447 ERROR: Error creating Memory object: 1 validation error for MemoryConfig
+vector_store
+  Value error, Extra fields not allowed: distance. Please input only the following fields: api_key, collection_name, embedding_model_dims, port, client, url, on_disk, host, path [type=value_error, input_value={'host': '160.22.122.50',..., 'path': '/tmp/qdrant'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:109]
+Traceback (most recent call last):
+  File "D:\MOOLY-CHABOT\CODE\mem0-rest\app.py", line 106, in <module>
+    memory = Memory.from_config(config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MOOLY-CHABOT\CODE\mem0-rest\venv\Lib\site-packages\mem0\memory\main.py", line 59, in from_config
+    config = MemoryConfig(**config_dict)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MOOLY-CHABOT\CODE\mem0-rest\venv\Lib\site-packages\pydantic\main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for MemoryConfig
+vector_store
+  Value error, Extra fields not allowed: distance. Please input only the following fields: api_key, collection_name, embedding_model_dims, port, client, url, on_disk, host, path [type=value_error, input_value={'host': '160.22.122.50',..., 'path': '/tmp/qdrant'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+2025-02-13 22:21:27,978 INFO: Deleting existing collection mem0... [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:80]
+2025-02-13 22:21:27,996 INFO: Creating new collection mem0... [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:83]
+2025-02-13 22:21:28,127 INFO: Collection created successfully. Info: status=<CollectionStatus.GREEN: 'green'> optimizer_status=<OptimizersStatusOneOf.OK: 'ok'> vectors_count=None indexed_vectors_count=0 points_count=0 segments_count=8 config=CollectionConfig(params=CollectionParams(vectors=VectorParams(size=1536, distance=<Distance.COSINE: 'Cosine'>, hnsw_config=None, quantization_config=None, on_disk=None, datatype=None, multivector_config=None), shard_number=1, sharding_method=None, replication_factor=1, write_consistency_factor=1, read_fan_out_factor=None, on_disk_payload=True, sparse_vectors=None), hnsw_config=HnswConfig(m=16, ef_construct=100, full_scan_threshold=10000, max_indexing_threads=0, on_disk=False, payload_m=None), optimizer_config=OptimizersConfig(deleted_threshold=0.2, vacuum_min_vector_number=1000, default_segment_number=0, max_segment_size=None, memmap_threshold=None, indexing_threshold=20000, flush_interval_sec=5, max_optimization_threads=None), wal_config=WalConfig(wal_capacity_mb=32, wal_segments_ahead=0), quantization_config=None) payload_schema={} [in D:\MOOLY-CHABOT\CODE\mem0-rest\app.py:98]

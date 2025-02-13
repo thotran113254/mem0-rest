@@ -46,7 +46,7 @@ litellm==1.44.17
 MarkupSafe==2.1.5
 marshmallow==3.22.0
 mccabe==0.7.0
-mem0ai==0.1.11
+mem0ai==0.1.48
 monotonic==1.6
 multidict==6.0.5
 mypy-extensions==1.0.0
@@ -60,8 +60,8 @@ portalocker==2.10.1
 posthog==3.6.3
 protobuf==5.28.0
 pycodestyle==2.12.1
-pydantic==2.8.2
-pydantic_core==2.20.1
+pydantic==2.10.6
+pydantic_core==2.29.0
 pylint==3.2.7
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
@@ -88,3 +88,4 @@ urllib3==2.2.2
 Werkzeug==3.0.4
 yarl==1.9.11
 zipp==3.20.1
+google-generativeai==0.8.4
