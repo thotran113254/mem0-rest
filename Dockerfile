@@ -2,12 +2,14 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-# Cập nhật pip trước khi cài đặt packages
-RUN pip install --no-cache-dir --upgrade pip
+# Cập nhật pip và xóa cache
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip cache purge
 
 # Copy requirements và cài đặt dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir pydantic==2.10.6 pydantic-core==2.29.0 && \
+RUN pip uninstall -y pydantic pydantic-core && \
+    pip install --no-cache-dir pydantic>=2.6.1 pydantic-core>=2.14.5 && \
     pip install --no-cache-dir -r requirements.txt
 
 COPY . .
