@@ -61,7 +61,7 @@ posthog==3.6.3
 protobuf==5.28.0
 pycodestyle==2.12.1
 pydantic==2.10.6
-pydantic_core==2.29.0
+pydantic_core==2.27.2
 pylint==3.2.7
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
